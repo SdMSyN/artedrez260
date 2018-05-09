@@ -8,10 +8,10 @@
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
     </head>
     <body>
-        <div id="cen">
-     <?php include('cabecera.php');?>
-         </div>      
+
+
         <div class="container">
+            <?php include('cabecera.php'); ?>   
             <div class=" row">
                 <div class=" col-xs-12 col-sm-8 col-md-8">
                     <h1>
@@ -20,24 +20,24 @@
                     <hr class="bg-info">
                     <form action="buscarRating.php" method="post" class="" name="form1">
                         <div>
-                        <p class="text-danger small">*Campo Obligatorio </p>
-                        <label for="nombrec">Nombre Completo:</label>
-                        <input class="form-control" id="inputap" name="input_nombrec" placeholder="apellido paterno, apellido materno, nombre" required="" ><br>
+                            <p class="text-danger small">*Campo Obligatorio </p>
+                            <label for="nombrec">Nombre Completo:</label>
+                            <input class="form-control" id="inputap" name="input_nombrec" placeholder="apellido paterno, apellido materno, nombre" required="" ><br>
                         </div>
-                         <div class="alert alert-primary" role="alert">
-                                Aplicar Filtro selecciona un campo 
-                         </div>
+                        <div class="alert alert-primary" role="alert">
+                            Aplicar Filtro selecciona un campo 
+                        </div>
                         <div>
-                        <input name="id" type="checkbox" checked="checked" >Id&nbsp;
-                        <input name="no" type="checkbox" checked="checked" >Nombre&nbsp;
-                        <input name="ti" type="checkbox" >T&iacute;tulo&nbsp;
-                        <input name="as" type="checkbox" checked="checked" >Asociaci&oacute;n&nbsp;
-                        <input name="ra" type="checkbox" checked="checked" >Rating&nbsp;
-                        <input name="ge" type="checkbox" >G&nbsp;
-                        <input name="fn" type="checkbox" >Fecha de Nacimiento&nbsp;
-                        <input name="fl" type="checkbox" >Flags
+                            <input name="id" type="checkbox" checked="checked" >Id&nbsp;
+                            <input name="no" type="checkbox" checked="checked" >Nombre&nbsp;
+                            <input name="ti" type="checkbox" >T&iacute;tulo&nbsp;
+                            <input name="as" type="checkbox" checked="checked" >Asociaci&oacute;n&nbsp;
+                            <input name="ra" type="checkbox" checked="checked" >Rating&nbsp;
+                            <input name="ge" type="checkbox" >G&nbsp;
+                            <input name="fn" type="checkbox" >Fecha de Nacimiento&nbsp;
+                            <input name="fl" type="checkbox" >Flags
                         </div>
-                        <button type="button" class="btn btn-warning" onClick="validar()">Consultar Rating</button>
+                        <button type="submit" class="btn btn-warning" >Consultar Rating</button>
                     </form>
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-4">
