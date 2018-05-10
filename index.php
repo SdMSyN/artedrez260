@@ -18,11 +18,11 @@
                         Rating FENAMAC en línea
                     </h1>
                     <hr class="bg-info">
-                    <form action="buscarRating.php" method="post" class="" name="form1">
+                    <form action="consulta.php" method="post" class="" name="form1">
                         <div>
                             <p class="text-danger small">*Campo Obligatorio </p>
                             <label for="nombrec">Nombre Completo:</label>
-                            <input class="form-control" id="inputap" name="input_nombrec" placeholder="apellido paterno, apellido materno, nombre" required="" ><br>
+                            <input class="form-control" id="nombre_completo" name="nombre_completo" placeholder="Nombre Apellido Paterno Apellido Materno" required="" ><br>
                         </div>
                         <div class="alert alert-primary" role="alert">
                             Aplicar Filtro selecciona un campo 

@@ -57,24 +57,7 @@ if($ge==true) print '<td>G</td>';
 if($fn==true) print '<td>Fecha</td>';
 if($fl==true) print '<td>Flags</td>';
 print '</tr></b>';
-while($archivo=0){
-	if(stristr($linea[0],$buscarnombrec) && stristr($linea[1],$buscar)){
-		print '<tr>';
-		if($id==true) print '<td>'.$linea[0].'</td>';
-		if($no==true) print '<td>'.$linea[1].'</td>';
-		if($ti==true) print '<td>'.$linea[2].'</td>';
-		$asoc=trim(strtolower($linea[3]));
-		if($as==true) print '<td>'.$linea[3].'<img src="imgAsoc/as-'.$asoc.'.jpg" alt="'.$linea[7].'" width="50px" height="50px" /></td>';
-		if($ra==true) print '<td>'.$linea[4].'</td>';
-		if($ge==true) print '<td>'.$linea[5].'</td>';
-		if($fn==true) print '<td>'.$linea[6].'</td>';
-		if($fl==true) print '<td>'.$linea[7].'</td>';
-		print '</tr>';
-  		//echo '<hr>';
-  		$ban=true;
-	}
-        
-        }//end while
+
 if(!$ban) print '<tr><td>El jugador no tiene Rating Nacional</td></tr>';
 print '</table>';
 //fclose($archivo);
