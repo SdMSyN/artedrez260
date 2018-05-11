@@ -1,19 +1,26 @@
 <?php
-$enlace = mysqli_connect("localhost", "root", "", "artedrez");
-if (!$enlace) {
-    //echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
-    //echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
-    //echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
-    exit;
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "artedrez";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT name FROM federacion";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo " - Name: " . $row["name"],"<br>";
+    }
+} else {
+    echo "0 results";
 }
-//echo "Éxito: Se realizó una conexión apropiada a MySQL!" . PHP_EOL;
-//echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
-mysqli_close($enlace);
-
-$nombre_completo = $_POST['nombre_completo'];
-$consulta = "SELECT name FROM `federacion`"; 
-$resultado=mysql_query($consulta); 
-
-echo "Nombre: ".mysql_result($resultado, 0, "nombre")."<br>"; 
-
+$conn->close();
 ?>

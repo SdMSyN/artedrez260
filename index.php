@@ -22,7 +22,7 @@
                         <div>
                             <p class="text-danger small">*Campo Obligatorio </p>
                             <label for="nombrec">Nombre Completo:</label>
-                            <input class="form-control" id="nombre_completo" name="nombre_completo" placeholder="Nombre Apellido Paterno Apellido Materno" required="" ><br>
+                            <input class="form-control" id="nombre_completo" name="nombre" placeholder="Nombre Apellido Paterno Apellido Materno" required="" ><br>
                         </div>
                         <div class="alert alert-primary" role="alert">
                             Aplicar Filtro selecciona un campo 
