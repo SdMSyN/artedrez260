@@ -9,22 +9,24 @@
     </head>   
     <body>
         <div class="container">
+            <?php
+                include('cabecera.php');
+            ?>
             <table class="table table-hover">
                 <thead class="">
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Asociacion</th>
+                        <th scope="col">Asociación</th>
                         <th scope="col">Rating</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    include('cabecera.php');
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
-                    $dbname = "artedrez";
+                    $dbname = "artedrez_rating_fenamac";
 // Create connection
                     $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -35,8 +37,7 @@
 //echo $nombrec.'<br>';
                     $sql = "SELECT * FROM `federacion` WHERE `name` LIKE '%$nombrec%'";
                     $result = $conn->query($sql);
-                    "<br>";
-//echo $sql.'<br>'; 
+
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo "<tr>";
@@ -63,5 +64,5 @@
         </div>
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-    </body>>     
+    </body>     
 </html>	
